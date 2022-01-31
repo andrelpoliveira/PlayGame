@@ -30,6 +30,7 @@ public class LoginController : MonoBehaviour
     [Space]
     [Header("Rest")]
     public RestController restScritp;
+    public GameObject gamePanel;
 
     //public static PlayGamesPlatform platform;
     // Start is called before the first frame update
@@ -99,6 +100,8 @@ public class LoginController : MonoBehaviour
             PlayerPrefs.SetString("PLAYER_EMAIL", loginInp.text);
             PlayerPrefs.SetString("PLAYER_PASSWORD", passwordInp.text);
         }
+        loginPanel.gameObject.SetActive(false);
+        gamePanel.SetActive(true);
     }
 
     #endregion
