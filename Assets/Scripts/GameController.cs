@@ -54,12 +54,15 @@ public class GameController : MonoBehaviour
         btn_menu[0].onClick.AddListener(() => Menu(0));
 
         btn_shop[0].onClick.AddListener(() => Shop(0));
+
+        btn_play_quest[0].onClick.AddListener(() => PlayQuest(0));
     }
 
     void Quest(int number)
     {
         quest_panel[number].SetActive(true);
         quest_panel_init.SetActive(false);
+        Bar(number);
     }
 
     void Menu(int number)
@@ -77,6 +80,12 @@ public class GameController : MonoBehaviour
     void Bar(int number)
     {
         bar_mission[number].fillAmount = value[number] / value_max[number];
+    }
+
+    void PlayQuest(int number)
+    {
+        value[number] += 1;
+        Bar(number);
     }
 }
 
