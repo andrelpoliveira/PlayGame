@@ -39,6 +39,8 @@ public class GameController : MonoBehaviour
     [Header("Buttons Shop")]
     [SerializeField]
     private Button[] btn_shop = new Button[6];
+    [SerializeField]
+    private Button btn_back;
 
     [Space]
     [Header("Bar Missions")]
@@ -56,6 +58,8 @@ public class GameController : MonoBehaviour
         btn_shop[0].onClick.AddListener(() => Shop(0));
 
         btn_play_quest[0].onClick.AddListener(() => PlayQuest(0));
+
+        btn_back.onClick.AddListener(() => Back());
     }
 
     void Quest(int number)
@@ -86,6 +90,12 @@ public class GameController : MonoBehaviour
     {
         value[number] += 1;
         Bar(number);
+    }
+
+    void Back()
+    {
+        shop_panel.SetActive(false);
+        quest_panel_init.SetActive(true);
     }
 }
 

@@ -417,6 +417,7 @@ MonoBehaviour:
   - {fileID: 1050574047}
   - {fileID: 952062874}
   - {fileID: 2039905540}
+  btn_back: {fileID: 2003422299}
   bar_mission:
   - {fileID: 2089578662}
   - {fileID: 980604167}
@@ -834,6 +835,17 @@ MonoBehaviour:
 --- !u!114 &1823641563 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1438793052379436188, guid: 97540b61a3942ee4393e1b3b49a42194, type: 3}
+  m_PrefabInstance: {fileID: 2144998766}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2003422299 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1650476991926739319, guid: 97540b61a3942ee4393e1b3b49a42194, type: 3}
   m_PrefabInstance: {fileID: 2144998766}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
