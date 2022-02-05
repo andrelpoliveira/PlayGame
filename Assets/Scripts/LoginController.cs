@@ -1,7 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SocialPlatforms;
-using UnityEngine.SceneManagement;
 
 public class LoginController : MonoBehaviour
 {
@@ -50,27 +48,6 @@ public class LoginController : MonoBehaviour
         backBtnReg.onClick.AddListener(ButtonBackReg);
         messageBtn.onClick.AddListener(ButtonMessageClose);
         registerBtnReg.onClick.AddListener(ButtonRegisterReg);
-
-        //if(platform == null)
-        //{
-        //    PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
-        //    PlayGamesPlatform.InitializeInstance(config);
-        //    PlaGamesPlatform.DebugLogEnabled = true;
-
-        //    platform = PlayGamesPlatform.Activate();
-        //}
-
-        //social.active.localuser.authenticate((bool success, string err) =>
-        //{
-        //    if (success)
-        //    {
-        //        scenemanager.loadscene(1);
-        //    }
-        //    else if (!success)
-        //    {
-        //        logerr.text = "error: " + err;
-        //    }
-        //});
     }
 
     #region ##### FUNCTIONS #####
