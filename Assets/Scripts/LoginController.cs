@@ -4,10 +4,12 @@ using UnityEngine.UI;
 public class LoginController : MonoBehaviour
 {
     [Header("Login")]
+    public GameObject entrancePanel;
     public GameObject loginPanel;
     public InputField loginInp;
     public InputField passwordInp;
     public Button loginBtn;
+    public Button playBtn;
     public Button registerBtn;
 
     [Space]
@@ -41,8 +43,9 @@ public class LoginController : MonoBehaviour
             //ButtonLogin();
         }
 
-        MenuActive(loginPanel);
+        MenuActive(entrancePanel);
 
+        playBtn.onClick.AddListener(ButtonPlay);
         loginBtn.onClick.AddListener(ButtonLogin);
         registerBtn.onClick.AddListener(ButtonRegister);
         backBtnReg.onClick.AddListener(ButtonBackReg);
@@ -53,6 +56,7 @@ public class LoginController : MonoBehaviour
     #region ##### FUNCTIONS #####
     void MenuActive(GameObject panel)
     {
+        entrancePanel.gameObject.SetActive(entrancePanel.name.Equals(panel.name));
         loginPanel.gameObject.SetActive(loginPanel.name.Equals(panel.name));
         registerPanel.gameObject.SetActive(registerPanel.name.Equals(panel.name));
         messagePanel.gameObject.SetActive(messagePanel.name.Equals(panel.name));
@@ -122,6 +126,11 @@ public class LoginController : MonoBehaviour
     {
         MenuActive(loginPanel);
     }
+
+    void ButtonPlay()
+    {
+        MenuActive(loginPanel);
+    }
     
     #endregion
 
@@ -166,6 +175,7 @@ public class LoginController : MonoBehaviour
         }
 
         RegisterSend(emailTemp, passTemp);
+        MenuActive(gamePanel);
     }
     
     #endregion

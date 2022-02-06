@@ -29,6 +29,9 @@ public class GameController : MonoBehaviour
     [Header("Buttons Play Quests")]
     [SerializeField]
     private Button[] btn_play_quest = new Button[6];
+    [SerializeField]
+    private Text coin_txt;
+    private int coin_value = 0;
 
     [Space]
     [Header("Buttons Menu")]
@@ -90,6 +93,12 @@ public class GameController : MonoBehaviour
     {
         value[number] += 1;
         Bar(number);
+    }
+
+    public void RewardCoin()
+    {
+        coin_value += Random.Range(5, 12);
+        coin_txt.text = coin_value.ToString();
     }
 
     void Back()
